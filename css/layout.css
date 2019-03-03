@@ -1,0 +1,62 @@
+/**
+复选框容器
+ */
+.second{
+	width: 110px;
+	height: 16px;
+	border: 1px solid blue;
+	position: relative;
+}
+
+/**
+复选框容器下的复选框
+ */
+.second input[type="checkbox"]{
+	display: none;
+}
+
+/**
+复选框容器下的复选框Label
+ */
+.second label{
+	display:block;
+	width: 100%;
+	height: 100%;
+	line-height: 15px;
+	border: 1px solid red;
+	padding-left: 1.5rem;
+	box-sizing: border-box;
+	font-size: 1rem;
+}
+
+/**
+复选框容器下的复选框Label下的未选中状态的自定义复选框和复选框容器下的复选框label的选中状态的自定义复选框
+ */
+.second input ~ label:after,.second input[type="checkbox"]:checked + label:after{
+	width: 10px;
+	height: 10px;
+	display: block;
+	position: absolute;
+	top:50%;
+	left: 3%;
+	transform: translate(0, -50%);
+	text-align: center;
+	line-height: 10px;
+	color:#87CEEB;
+	font-size: 1.2rem;
+}
+
+/**
+复选框容器下的复选框Label下的未选中状态的自定义复选框
+ */
+.second input ~ label:after{
+	content: "\e630";
+}
+
+
+/**
+复选框容器下的复选框Label下的选中状态的自定义复选框
+ */
+.second input[type="checkbox"]:checked + label:after{
+	content:"\e772";
+}
